@@ -899,3 +899,70 @@ img {
     padding: 14px 16px;
   }
 }
+
+.ms-404__card {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-surface, #14171d);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: 16px;
+  padding: 36px 32px;
+  max-width: 780px;
+}
+
+.ms-404__head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.ms-404__code {
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--accent, #f97316);
+  animation: ms-pulse-404 3.2s ease-in-out infinite;
+}
+
+.ms-404__lead {
+  color: var(--text-muted, #9aa3b2);
+  max-width: 58ch;
+  margin-bottom: 24px;
+}
+
+.ms-404__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@keyframes ms-pulse-404 {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.72;
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ms-404__code {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .ms-404__card {
+    padding: 24px 18px;
+  }
+
+  .ms-404__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
