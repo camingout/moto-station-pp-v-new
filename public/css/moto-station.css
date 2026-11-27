@@ -1046,3 +1046,22 @@ img {
   }
 }
 
+.ms-faq__body {
+  overflow: hidden;
+  padding: 0 20px;
+  color: var(--text-muted, #b4bcc8);
+  line-height: 1.6;
+  transition: padding-bottom 0.25s ease;
+}
+
+.ms-faq__item.is-open .ms-faq__body {
+  padding-bottom: 18px;
+}
+
+.ms-faq__body p {
+  margin: 0 0 10px;
+}
+
+.ms-faq__body p:last-child {
+  margin-bottom: 0;
+}
