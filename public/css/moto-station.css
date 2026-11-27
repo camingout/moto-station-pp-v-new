@@ -966,3 +966,82 @@ img {
     gap: 8px;
   }
 }
+
+.ms-faq__list {
+  display: grid;
+  gap: 10px;
+}
+
+.ms-faq__item {
+  background: var(--bg-surface, #14171d);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ms-faq__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ms-faq__trigger:hover {
+  color: var(--accent, #f97316);
+}
+
+.ms-faq__icon {
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--accent, #f97316);
+  transition: transform 0.22s ease;
+}
+
+.ms-faq__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+
+.ms-faq__body {
+  overflow: hidden;
+}
+
+.ms-faq__body > :first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.ms-faq__body > :last-child {
+  margin-bottom: 0;
+}
+
+.ms-faq__body p {
+  padding: 0 20px 18px;
+  color: var(--text-muted, #b4bcc8);
+}
+
+.ms-faq__item.is-open .ms-faq__panel {
+  grid-template-rows: 1fr;
+}
+
+.ms-faq__item.is-open .ms-faq__icon {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ms-faq__panel,
+  .ms-faq__icon {
+    transition: none;
+  }
+}
